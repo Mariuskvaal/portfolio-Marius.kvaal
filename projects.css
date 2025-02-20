@@ -1,18 +1,17 @@
 /* Reset styles */
-body, h1, h3 {
-    margin: 0;
-    padding: 0;
-}
+
 
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh; /* Ensure it expands based on content */
     font-family: Arial, sans-serif;
     background-color: #ffffff;
+}
+
+h1, h3 {
+    margin: 0;
+    padding: 0;
 }
 
 /* Navigation Bar */
@@ -46,12 +45,13 @@ body {
 /* Main Container */
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    height: 100vh;
+    align-items: center;
     text-align: center;
+    padding-top: 50px; /* Push content down a bit */
+    width: 100%;
 }
+
 
 /* Styling for text */
 h1 {
@@ -146,11 +146,71 @@ h3 {
     display: inline-block;
 }
 
-
-/* Container for the text and the spinner */
-.under-utvikling {
+.Projects-overview-wrapper {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start; /* Avoid centering that hides content */
     align-items: center;
-    gap: 10px; /* Space between spinner and text */
+    width: 100%;
+    padding: 20px 0;
+}
+
+
+/* Adjust width for smaller screens */
+.project {
+    width: 90%; /* Makes it responsive */
+    max-width: 300px; /* Prevents it from getting too wide */
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.project h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.project p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.plus-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Background images */
+.project-1 {
+    background: url('/images/Holidaze-picture-mobile.png') no-repeat center center;
+    background-size: cover;
+}
+
+.project-2 {
+    background: url('/images/React-Store.ecoomerce.mobile.png') center/cover no-repeat;
+}
+
+.project-3 {
+    background: url('/images/Holidaze-picture-mobile.png') center/cover no-repeat;
 }
 
