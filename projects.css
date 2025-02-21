@@ -1,62 +1,35 @@
 /* Reset styles */
+html, body {
+    overflow-y: auto;
+}
 
 
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Ensure it expands based on content */
-    font-family: Arial, sans-serif;
+    height: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
     background-color: #ffffff;
 }
 
-h1, h3 {
-    margin: 0;
-    padding: 0;
-}
-
-/* Navigation Bar */
-.tablist {
-    display: flex;
-    justify-content: center;
-    background: white;
-    padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.tablist a {
-    padding: 12px 20px;
-    text-decoration: none;
-    font-size: 16px;
-    color: black;
-    border-radius: 20px;
-    margin: 0 10px;
-    border: 1px solid black;
-}
-
-.tablist a.active {
-    background: black;
-    color: white;
-}
-
-/* Main Container */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 50px; /* Push content down a bit */
     width: 100%;
+    gap: 1rem;
+    margin-top: 20px;
 }
 
+/* STYLING TEXT START */
+/* STYLING TEXT START */
 
-/* Styling for text */
 h1 {
-    font-size: 64px;
-    font-weight: bold;
+    font-size: 56px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
 }
 
 h3 {
@@ -64,14 +37,16 @@ h3 {
     font-weight: normal;
     color: gray;
     margin-top: 10px;
+    margin: 0;
+    padding: 0;
 }
 
-/*Dropdown */
+/* STYLING TEXT END */
+/* STYLING TEXT END */
 
-/* General Reset */
+/* DROPDOWN CONTAINER START */
+/* DROPDOWN CONTAINER START */
 
-
-/* Dropdown Container */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -146,71 +121,68 @@ h3 {
     display: inline-block;
 }
 
-.Projects-overview-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: flex-start; /* Avoid centering that hides content */
-    align-items: center;
-    width: 100%;
-    padding: 20px 0;
-}
+
+/* DROPDOWN CONTAINER END */
+/* DROPDOWN CONTAINER END */
 
 
-/* Adjust width for smaller screens */
-.project {
-    width: 90%; /* Makes it responsive */
-    max-width: 300px; /* Prevents it from getting too wide */
-    height: 450px;
-    border-radius: 20px;
+.accordion {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
     padding: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.project h5 {
     font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.project p {
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-.plus-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 15px;
-    font-size: 24px;
-    background: rgba(255, 255, 255, 0.3);
-    color: white;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-weight: bold;
+    font-weight: 600;
+    text-align: left;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
 }
 
-/* Background images */
-.project-1 {
-    background: url('/images/Holidaze-picture-mobile.png') no-repeat center center;
-    background-size: cover;
+.accordion-header .arrow {
+    transition: transform 0.3s ease;
 }
 
-.project-2 {
-    background: url('/images/React-Store.ecoomerce.mobile.png') center/cover no-repeat;
+.accordion-content {
+    display: none;
+    padding: 20px;
+    background: white;
+    font-size: 16px;
+    color: #333;
 }
 
-.project-3 {
-    background: url('/images/Holidaze-picture-mobile.png') center/cover no-repeat;
+.accordion-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
+/* Show content when active */
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+/* Rotate arrow when active */
+.accordion-item.active .arrow {
+    transform: rotate(180deg);
+}
