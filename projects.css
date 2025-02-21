@@ -63,11 +63,13 @@ h3 {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: black;
 }
 
 /* Arrow Icon */
 .dropdown-btn .arrow {
     font-size: 14px;
+    color: black;
 }
 
 /* Dropdown Menu */
@@ -157,10 +159,12 @@ h3 {
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    color: black;
 }
 
 .accordion-header .arrow {
     transition: transform 0.3s ease;
+    color: black;
 }
 
 .accordion-content {
