@@ -3,7 +3,6 @@ html, body {
     overflow-y: auto;
 }
 
-
 body {
     margin: 0;
     padding: 0;
@@ -137,6 +136,12 @@ h3 {
     overflow: hidden;
 }
 
+.project-information {
+    background-color: #f5f5f7;
+    padding: 20px;
+    border-radius: 20px;
+}
+
 .accordion-item {
     border-bottom: 1px solid #ddd;
 }
@@ -178,7 +183,6 @@ h3 {
 .accordion-content img {
     max-width: 100%;
     border-radius: 10px;
-    margin-top: 10px;
 }
 
 /* Show content when active */
@@ -190,3 +194,99 @@ h3 {
 .accordion-item.active .arrow {
     transform: rotate(180deg);
 }
+
+/* CAROUSEL CONTAINER START */
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Carousel Items */
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 20px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: none; /* Hide by default */
+    border-radius: 20px;
+}
+
+.carousel-item.active {
+    display: block; /* Show active image */
+
+}
+
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* CAROUSEL CONTAINER END */
+
+/* PROJECTS LINKS START*/
+
+.project-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    background: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.link-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+
+/* PROJECTS LINKS END*/
