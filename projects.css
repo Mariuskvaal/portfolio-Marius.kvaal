@@ -31,7 +31,7 @@ h1 {
     padding: 0;
 }
 
-h3 {
+h2, h3 {
     font-size: 24px;
     font-weight: normal;
     color: gray;
@@ -140,6 +140,17 @@ h5 {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+}
+
+.h1-inside-accordion {
+    text-align: center;
+    word-break: break-all;
+}
+
+.h3-inside-accordion {
+    text-align: center;
+    padding: 24px;
+    font-weight: 900;
 }
 
 .project-information {
@@ -273,8 +284,7 @@ h5 {
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
     color: black;
     background: #f5f5f5;
     padding: 10px 15px;
