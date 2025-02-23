@@ -46,6 +46,29 @@ h5 {
     color: gray;
 }
 
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 18px; /* Adjust title size */
+    font-weight: 600;
+}
+
+.year {
+    font-size: 14px; /* Smaller text for year */
+    font-weight: 400;
+    color: gray; /* Optional: Make it visually subtle */
+    margin-top: 2px; /* Adds spacing between title and year */
+}
+
+
+
+.containerName {
+    padding-bottom: 16px;
+}
+
 /* STYLING TEXT END */
 /* STYLING TEXT END */
 
@@ -55,6 +78,8 @@ h5 {
 .dropdown {
     position: relative;
     display: inline-block;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 /* Dropdown Button */
