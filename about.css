@@ -1,0 +1,39 @@
+.about-information {
+    background-color: #f5f5f7;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 70%;
+}
+
+h3 {
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+.about-information p {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.about-information p:nth-child(1)::after {
+    content: '\1F4CD'; /* Map pin emoji as location icon */
+}
+
+.about-information p:nth-child(2)::after {
+    content: '\1F4C5'; /* Calendar emoji as age icon */
+}
+
+.animated-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6e6e73; /* Grey text */
+}
+
+.animated-text strong {
+    font-weight: 600;
+    color: #1d1d1f; /* Black text */
+}
+
+
