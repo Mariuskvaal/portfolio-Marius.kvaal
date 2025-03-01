@@ -169,7 +169,9 @@ h5 {
 
 .h1-inside-accordion {
     text-align: center;
-    word-break: break-all;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .h3-inside-accordion {
