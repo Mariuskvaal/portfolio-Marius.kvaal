@@ -386,3 +386,25 @@ h5 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+@media (min-width: 480px) {
+
+    .accordion{
+        max-width: 600px;
+        margin-bottom: 200px;
+        margin-top: 20px;
+    }
+
+    .carousel{
+        border-radius: 40px;
+    }
+    .carousel-container {
+        max-height: 60vh;
+    }
+
+    .carousel-item {
+        object-fit: contain;
+        border-radius: 40px;
+
+    }
+}
+
